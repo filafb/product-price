@@ -89,7 +89,7 @@ function InstallmentsRenderer({
             </span>
           ),
           hasInterest,
-          hasMoreThanOne
+          hasMoreThanOne,
         }}
       />
     </span>
