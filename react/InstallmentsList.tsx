@@ -3,7 +3,7 @@ import { useCssHandles, CssHandlesTypes } from 'vtex.css-handles'
 import { ProductTypes, useProduct } from 'vtex.product-context'
 
 import { InstallmentsContextProvider } from './components/InstallmentsContext'
-import pickInstallments from './modules/pickInstallments'
+import pickInstallmentsList from './modules/pickInstallments'
 import { getDefaultSeller } from './modules/seller'
 
 const CSS_HANDLES = ['installmentsListContainer'] as const
@@ -28,7 +28,7 @@ function InstallmentsList({ classes, children }: PropsWithChildren<Props>) {
     return null
   }
 
-  const pickedInstallments = pickInstallments(
+  const pickedInstallments = pickInstallmentsList(
     commercialOffer.Installments,
     'PaymentSystemName'
   )
